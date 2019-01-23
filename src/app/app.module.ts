@@ -14,7 +14,7 @@ import {
   MatDialogModule,
   MatInputModule,
   MatCheckboxModule,
-  MatFormFieldModule
+  MatFormFieldModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -64,7 +64,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatDialogModule,
     MatInputModule,
     MatCheckboxModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   providers: [
     DishService,
