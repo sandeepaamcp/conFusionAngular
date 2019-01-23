@@ -8,7 +8,13 @@ import {
   MatListModule,
   MatButtonModule,
   MatCardModule,
-  MatLineModule, MatGridListModule
+  MatLineModule, 
+  MatGridListModule,
+  MatDialog,
+  MatDialogModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatFormFieldModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -22,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
@@ -38,7 +45,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -52,12 +60,19 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatFormFieldModule
   ],
   providers: [
     DishService,
     PromotionService,
     LeaderService],
+    entryComponents:[
+      LoginComponent
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
