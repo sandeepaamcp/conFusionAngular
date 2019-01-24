@@ -3,7 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {
+import { ReactiveFormsModule } from '@angular/forms';
+import { 
   MatToolbarModule,
   MatListModule,
   MatButtonModule,
@@ -15,6 +16,8 @@ import {
   MatInputModule,
   MatCheckboxModule,
   MatFormFieldModule,
+  MatSelectModule,
+  MatSlideToggleModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -65,6 +68,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatInputModule,
     MatCheckboxModule,
     MatFormFieldModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule
   ],
   providers: [
     DishService,
