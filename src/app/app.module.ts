@@ -18,6 +18,7 @@ import {
   MatFormFieldModule,
   MatSelectModule,
   MatSlideToggleModule,
+  MatProgressSpinnerModule,
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -70,7 +71,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MatFormFieldModule,
     MatSelectModule,
     MatSlideToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     DishService,
