@@ -4,12 +4,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { 
+import { HttpClientModule } from '@angular/common/http';
+
+import { baseURL } from './shared/baseurl';
+
+import {
   MatToolbarModule,
   MatListModule,
   MatButtonModule,
   MatCardModule,
-  MatLineModule, 
+  MatLineModule,
   MatGridListModule,
   MatDialog,
   MatDialogModule,
@@ -37,6 +41,7 @@ import { LoginComponent } from './login/login.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
@@ -54,6 +59,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
@@ -77,10 +83,12 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
   providers: [
     DishService,
     PromotionService,
-    LeaderService],
-    entryComponents:[
-      LoginComponent
-    ],
+    LeaderService,
+    ProcessHTTPMsgService,
+    { provide: 'BaseURL', useValue: baseURL }],
+  entryComponents: [
+    LoginComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
